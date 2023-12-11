@@ -1,0 +1,1 @@
+{"ast":null,"code":"let constants = {\n  serverUrl: \"http://localhost:5555\",\n  videoSettings: {\n    width: 800,\n    height: 600\n  }\n};\nexport default constants;","map":null,"metadata":{},"sourceType":"module","externalDependencies":[]}

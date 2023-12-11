@@ -1,0 +1,15 @@
+<div class="join-wrapper">
+    <div class="join-dialog">
+        <form (ngSubmit)="onSubmit()">
+            <div class="name-container">
+                <div class="name-label-container">
+                    <label class="name-label">Name</label>
+                </div>
+                <div class="name-input-container">
+                    <input name="name" class="name-input" type="text" [(ngModel)]="name" required minlength="0">
+                </div>
+            </div>
+            <button class="submit-button" type="submit" [disabled]="!name">Join</button>
+        </form>
+    </div>
+</div>

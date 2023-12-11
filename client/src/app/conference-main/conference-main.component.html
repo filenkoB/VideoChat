@@ -1,0 +1,20 @@
+<div id="conference-container">
+    <div id="main-container">
+        <div *ngIf="sharing" id="sharing-container">
+            <video [srcObject]="sharingStream" autoplay></video>
+        </div>
+        <div id="participants-container" [ngClass]="{ 'sharing-participants-container': sharing }">
+            <div *ngFor="let participant of participants; let i = index" class="participant" [ngClass]="{ 'sharing-participant': sharing }">
+                <app-participant *ngIf="i === 0" [muted]="true" [participant]="participant" #localParticipant></app-participant>
+                <app-participant *ngIf="i !== 0" [muted]="false" [participant]="participant"></app-participant>
+            </div>
+        </div>
+    </div>
+    <app-input-controls
+        (switchvideo)="onSwitchVideo($event)"
+        (switchmicro)="onSwitchMicro($event)"
+        (switchsharing)="onSwitchSharing($event)"
+        (leave)="onLeave()"
+        [sharing]="sharing">
+    </app-input-controls>
+</div>

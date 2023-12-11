@@ -1,0 +1,32 @@
+#controls-container {
+    background-color: #434343;
+    width: fit-content;
+    padding: 10px 30px;
+    margin: 5px auto;
+    border-radius: 5px;
+    box-shadow: 0 0 5px #2d2d2d;
+    gap: 10px;
+    display: flex;
+
+    .input-btn-active {
+        background-color: rgb(201, 0, 0);
+    }
+
+    .input-btn-inactive {
+        background-color: rgb(104, 103, 103);
+    }
+
+    .sharing-disabled {
+        background-color: rgba(104, 103, 103, 0.736);
+    }
+
+    .input-button {
+        width: 40px;
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 20px;
+        cursor: pointer;
+    }
+}

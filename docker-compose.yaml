@@ -1,0 +1,22 @@
+version: '3.6'
+
+services:
+  chat-server:
+    build: ./Server/
+    image: "chat-server"
+    ports:
+      - 5555:5555
+    networks:
+      - server-network
+
+  chat-client:
+    build: ./client/
+    image: "chat-client"
+    ports:
+      - 8080:80
+    networks:
+      - server-network
+
+networks:
+  server-network:
+    driver: bridge
